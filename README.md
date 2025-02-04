@@ -18,21 +18,6 @@ By providing personalized, real-time insights based on localized weather, soil c
 
 Meadow AI isn't just a technological solution—it’s an **equalizer**. By democratizing access to information, we empower farmers to break free from the recurring cycle of oversupply, food wastage, and financial struggle. Our goal is to enhance both **food security** and **economic resilience**, ensuring that farmers in underserved areas have the same opportunities as those in more resource-rich environments.
 
-## ⚙️ Technology Implementation
-### 🔧 Key Technologies Used
-- **Machine Learning Models**: Used for generating tailored crop recommendations based on climate, soil conditions, and regional trends.
-- **Weather Data APIs**: Provide real-time weather insights to help farmers optimize planting schedules.
-- **Personalized Crop Guidance**: Delivers continuous, step-by-step advice to farmers throughout the growing season.
-
-## 📦 Solution Architecture
-![Meadow AI Architecture](https://github.com/user-attachments/assets/54217a80-3d2c-4dbd-be77-1e67f31297a0)
-
-1. Farmers access Meadow AI through an intuitive interface.
-2. The app provides **personalized crop recommendations** based on real-time climate data.
-3. Farmers receive **detailed insights** on why certain crops are suitable and how to cultivate them effectively.
-4. Users can **save their crop selection** and receive **daily farming tips**.
-5. The platform also connects farmers with **trusted seed suppliers** to improve accessibility.
-
 
 ### Current Features:
 ✅ Tailored crop recommendations  
