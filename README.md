@@ -49,36 +49,46 @@ sequenceDiagram
 
 ## Installation & Setup
 
+> [Warning]
+> You will need access from project owners to clone the Meadow AI app
+
 ### Prerequisites
 
 - Node.js & npm
 - React Native CLI & dependencies
 - Python (for ML model development)
 
-### Steps
+### Clone Meadow AI App
 
-1. **Clone the Repository**
-_(You will need access from project owners)_
+1. **Clone the Repository**  
+
    ```sh
-   git clone https://github.com/MeedowDev/MeedowAI.git
-   cd MeedowAI
+   git clone https://github.com/MeedowDev/meadow-ai-app.git
+   cd meadow-ai-app
    ```
 
 2. **Set Up the React Native App**
-
    ```sh
-   cd frontend
    npm install
-   npx react-native start
+   npm run start
    ```
 
-3. **Set Up the Proxy Server**
+### Clone Meadow AI Proxy Server
 
+1. **Clone the repository**
    ```sh
-   cd backend
-   npm install
-   node server.js
+   git clone https://github.com/MeedowDev/meadow-ai-huggingface-proxy.git
+   cd meadow-ai-huggingface-proxy
    ```
+
+2. **Set Up NextJs server**
+   ```sh
+   npm install
+   npm run dev
+   ```
+   
+### Review model training on google collab
++ Review here `https://colab.research.google.com/drive/1cP32tqNw-duwB0QinEO19XYZRwhnW6p9?usp=sharing`
 
 4. **Model Deployment on Hugging Face**
 
@@ -150,8 +160,8 @@ _(You will need access from project owners)_
 
 ## Contributors
 
-[Mark Victor](https://github.com/victorcodebase)
-[steph](https://github.com/stephanjosh)
++ [Mark Victor](https://github.com/victorcodebase)
++ [steph](https://github.com/stephanjosh)
 
 ## License
 
