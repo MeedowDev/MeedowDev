@@ -115,9 +115,8 @@ sequenceDiagram
 
 ## Contributors
 
-- **[Your Name]** - React Native App
-- **[Team Member]** - Backend Development
-- **[Team Member]** - Machine Learning Model
+[Mark Victor](https://github.com/victorcodebase)
+[steph](https://github.com/stephanjosh)
 
 ## License
 
