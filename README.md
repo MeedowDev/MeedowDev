@@ -2,21 +2,127 @@
   <img src="https://github.com/user-attachments/assets/695573cb-c304-4e05-a5f3-8b27634d08d9" alt="Meadow AI project header" style="border-radius: 13;"/>
 </p>
 
+# Meadow AI - Crop Prediction System
 
-# Meadow AI Overview
+## Overview
 
-## 🌍 The Issue We Are Solving
-Small-scale farmers in underprivileged communities often lack access to crucial agricultural information. This leads many to plant the same crops simultaneously, causing market oversaturation and driving prices down, trapping them in a cycle of poverty.
+Meadow AI is a machine learning-powered crop prediction system designed to help small-scale farmers make data-driven decisions. The system consists of a **React Native** application that collects relevant features and predicts the most probable crop labels by communicating with a **proxy server**, which in turn interacts with a deployed machine learning model on **Hugging Face**.
 
-## 💡 How Our Solution Helps
-Meadow AI ensures equitable access to vital agricultural insights, empowering smallholder farmers with data-driven recommendations.
+## Architecture
 
-## 🌿 Our Approach
-Meadow AI addresses the critical need for **accessible agricultural information**, helping farmers make informed decisions about what to plant, when to plant, and how to cultivate effectively.  
+The solution follows the **MVVM (Model-View-ViewModel) architecture** in the React Native app, ensuring separation of concerns and maintainability. It includes:
 
-By providing personalized, real-time insights based on localized weather, soil conditions, and regional planting patterns, Meadow AI bridges the gap between traditional farming practices and modern technology. This ensures that small-scale farmers can diversify their crops, reduce market saturation, and improve their economic stability.  
+- **React Native App (Frontend)**: Collects user input, processes feature data, and displays crop predictions.
+- **Proxy Server (Backend API)**: Acts as an intermediary between the app and the model, handling requests and responses.
+- **ML Model (Hosted on Hugging Face)**: Receives feature data, processes it, and returns predictions.
 
-Meadow AI isn't just a technological solution—it’s an **equalizer**. By democratizing access to information, we empower farmers to break free from the recurring cycle of oversupply, food wastage, and financial struggle. Our goal is to enhance both **food security** and **economic resilience**, ensuring that farmers in underserved areas have the same opportunities as those in more resource-rich environments.
+### Data Flow
+```mermaid
+sequenceDiagram
+    participant User
+    participant ReactNativeApp as React Native App
+    participant ProxyServer as Proxy Server
+    participant MLModel as ML Model (Hugging Face)
+
+    User ->> ReactNativeApp: Inputs environmental conditions
+    ReactNativeApp ->> ProxyServer: Sends feature data
+    ProxyServer ->> MLModel: Forwards request
+    MLModel -->> ProxyServer: Returns predicted crops
+    ProxyServer -->> ReactNativeApp: Sends prediction response
+    ReactNativeApp -->> User: Displays predicted crops
+```
+
+1. The user inputs relevant environmental conditions into the **React Native app**.
+2. The app generates feature data and sends a request to the **proxy server**.
+3. The **proxy server** forwards the request to the **machine learning model on Hugging Face**.
+4. The **ML model** processes the request and returns the most probable crop labels.
+5. The **proxy server** relays the response back to the **React Native app**.
+6. The app displays the predicted crops to the user.
+
+## Technologies Used
+
+- **Frontend**: React Native (MVVM architecture)
+- **Backend**: Node.js/Express (Proxy Server)
+- **Machine Learning**: XGBoost, KNN, Random Forest (Hosted on Hugging Face)
+- **Deployment**: Hugging Face for model hosting
+- **Data**: CSV-based dataset from Meedow AI’s repository
+
+## Installation & Setup
+
+### Prerequisites
+
+- Node.js & npm
+- React Native CLI & dependencies
+- Python (for ML model development)
+
+### Steps
+
+1. **Clone the Repository**
+
+   ```sh
+   git clone https://github.com/MeedowDev/MeedowAI.git
+   cd MeedowAI
+   ```
+
+2. **Set Up the React Native App**
+
+   ```sh
+   cd frontend
+   npm install
+   npx react-native start
+   ```
+
+3. **Set Up the Proxy Server**
+
+   ```sh
+   cd backend
+   npm install
+   node server.js
+   ```
+
+4. **Model Deployment on Hugging Face**
+
+   - The trained model is already deployed on Hugging Face.
+   - Update the proxy server’s `.env` file with the model API URL.
+
+## API Endpoints
+
+| Method | Endpoint   | Description                                     |
+| ------ | ---------- | ----------------------------------------------- |
+| POST   | `/predict` | Sends feature data and returns crop predictions |
+
+### Sample Request
+
+```json
+{
+  "features": [25.3, 60.5, 300.2, "Q2"]
+}
+```
+
+### Sample Response
+
+```json
+{
+  "predictions": ["Maize", "Sorghum", "Millet"]
+}
+```
+
+## Future Improvements
+
+- Optimize inference time.
+- Improve model accuracy with more training data.
+- Implement user authentication for personalized recommendations.
+
+## Contributors
+
+- **[Your Name]** - React Native App
+- **[Team Member]** - Backend Development
+- **[Team Member]** - Machine Learning Model
+
+## License
+
+This project is licensed under the MIT License.
+
 
 ## 🤖 Solution  
 | Home Screen | Crop Prediction | Your Account |
