@@ -58,7 +58,7 @@ sequenceDiagram
 ### Steps
 
 1. **Clone the Repository**
-
+_(You will need access from project owners)_
    ```sh
    git clone https://github.com/MeedowDev/MeedowAI.git
    cd MeedowAI
@@ -95,7 +95,36 @@ sequenceDiagram
 
 ```json
 {
-  "features": [25.3, 60.5, 300.2, "Q2"]
+  {
+  "h_mean_Q1": 73.6590909090909,
+  "h_mean_Q2": 70.75,
+  "h_mean_Q3": 73.88636363636364,
+  "h_mean_Q4": 73.52272727272727,
+  "r_sum_Q1": 1.0618181818181816,
+  "r_sum_Q2": 1.8875000000000002,
+  "r_sum_Q3": 0.7829545454545453,
+  "r_sum_Q4": 0.4690909090909087,
+  "t_max_Q1": 29.5,
+  "t_max_Q2": 30.1,
+  "t_max_Q3": 27.8,
+  "t_max_Q4": 25.1,
+  "t_mean_Q1": 26.263636363636362,
+  "t_mean_Q2": 26.577272727272728,
+  "t_mean_Q3": 24.281818181818178,
+  "t_mean_Q4": 22.382954545454538,
+  "t_min_Q1": 8.8,
+  "t_min_Q2": 14.7,
+  "t_min_Q3": 11.8,
+  "t_min_Q4": 12.6,
+  "w_max_Q1": 11.2,
+  "w_max_Q2": 10.9,
+  "w_max_Q3": 9,
+  "w_max_Q4": 8.8,
+  "w_mean_Q1": 9.65454545454546,
+  "w_mean_Q2": 8.752272727272725,
+  "w_mean_Q3": 7.572727272727275,
+  "w_mean_Q4": 7.082954545454546
+}
 }
 ```
 
@@ -103,7 +132,13 @@ sequenceDiagram
 
 ```json
 {
-  "predictions": ["Maize", "Sorghum", "Millet"]
+  "data": [
+    "Bananas_Nusu Ngombe: 62.00%Papaya_Kapoho: 61.00%Cassava_Kibandameno: 50.00%"
+  ],
+  "endpoint": "/predict",
+  "fn_index": 0,
+  "time": "2025-02-07T11:55:06.004Z",
+  "type": "data"
 }
 ```
 
