@@ -187,8 +187,3 @@ Ensure you have the following installed:
 - [Node.js](https://nodejs.org/) (v12+ recommended)  
 - [Expo CLI](https://docs.expo.dev/get-started/installation/)  
 - [Git](https://git-scm.com/)  
-
-### Cloning the Repository
-```bash
-git clone https://github.com/MeedowDev/Meadow-AI.git
-cd Meadow-AI
